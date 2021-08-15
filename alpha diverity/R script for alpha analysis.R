@@ -4,9 +4,9 @@ data_OTU<-read.csv(file.choose(),row.names = 1,header = TRUE,check.names = FALSE
 relative_abundance=function(d){
   dta_sum=apply(d,2,function(x){x/sum(x)})
 }
-abu=relative_abundance(d = data_OTU)
-abu=as.data.frame(abu)
-write.csv(abu,file="C:/users/chenmolian/Desktop/Data8.8/Figure 1/alpha/vOTU_abu.csv")
+abu<-relative_abundance(d = data_OTU)
+abu<-as.data.frame(abu)
+write.csv(abu,file="wd/vOTU_abu.csv")
 
 #calculate alpha-diversity indexes
 alpha <- function(x, tree = NULL, base = exp(1)) {
@@ -21,4 +21,4 @@ alpha <- function(x, tree = NULL, base = exp(1)) {
 abu_alpha<-t(data_OTU) #first column=treatment (CK_7,CK_14,CK_24...)
 alpha_all <- alpha(abu_alpha, base = exp(1))
 alpha_all
-write.csv(alpha_all,file="C:/users/chenmolian/Desktop/Data8.8/Figure 1/alpha/vOTU_alpha2.csv")
+write.csv(alpha_all,file="wd/vOTU_alpha2.csv")
