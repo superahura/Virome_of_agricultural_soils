@@ -6,7 +6,7 @@ relative_abundance=function(d){
 }
 abu<-relative_abundance(d = data_OTU)
 abu<-as.data.frame(abu)
-write.csv(abu,file="wd/vOTU_abu.csv")
+write.csv(abu,file='vOTU_abu.csv')
 
 #calculate alpha-diversity indexes
 alpha <- function(x, tree = NULL, base = exp(1)) {
@@ -21,4 +21,4 @@ alpha <- function(x, tree = NULL, base = exp(1)) {
 abu_alpha<-t(data_OTU) #first column=treatment (CK_7,CK_14,CK_24...)
 alpha_all <- alpha(abu_alpha, base = exp(1))
 alpha_all
-write.csv(alpha_all,file="wd/vOTU_alpha2.csv")
+write.csv(alpha_all,file='vOTU_alpha2.csv')
