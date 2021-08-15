@@ -30,6 +30,7 @@ pval <- signif(pro$signif, 1)
 p_data <- rbind(bc_pro, vOTU_pro)
 head(p_data)
 p_data<-data.frame(p_data, group)
+
 p_pro<- ggplot(p_data,aes(fill=group))+
   # geom_point(aes(x = Dim1, y = Dim2,shape=type,color=group),size=3) +
   geom_point(aes(x = Dim1, y = Dim2,shape=type),size=3) +
