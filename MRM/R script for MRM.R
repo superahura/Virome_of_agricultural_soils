@@ -98,9 +98,3 @@ mp_coeffi<-ggplot(data_coeffi,aes(env,coffi,fill=env))+
   )
 
 mp_coeffi
-
-
-
-
-
-
