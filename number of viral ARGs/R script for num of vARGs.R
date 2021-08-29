@@ -33,5 +33,4 @@ mp_all<-ggplot(m1_all_n,aes(Treatment,mean,fill=Classification))+
         axis.text.x = element_text(angle = 45,hjust = 1,vjust = 1),
         axis.title.x = element_blank(),
         legend.position = 'right')
-
 mp_all
